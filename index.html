@@ -39,7 +39,7 @@
                                 Penilaian Majlis Penutupan / Closing Ceremony
                             </span>
                             <span class="bg-teal-400/20 text-teal-200 border border-teal-400/30 text-[10px] font-semibold px-2.5 py-0.5 rounded-full backdrop-blur-md">
-                                Booth Exhibition v1.1
+                                Booth Exhibition v1.3
                             </span>
                         </div>
                         <h1 class="text-2xl md:text-4xl font-black tracking-tight text-white drop-shadow-lg">
@@ -66,7 +66,7 @@
 
         <form id="scoringForm" onsubmit="event.preventDefault();" class="p-6 md:p-10 space-y-8">
             
-            <!-- Maklumat Hakim & Peserta -->
+            <!-- Maklumat Hakim & Peserta (Dropdown Menu Rasmi) -->
             <div>
                 <h3 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -74,17 +74,36 @@
                 </h3>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <!-- Dropdown Nama Hakim -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase mb-1">
-                            Nama Hakim <span class="text-slate-400 font-normal">/ Judge's Name</span>
+                            Nama Hakim <span class="text-slate-400 font-normal">/ Select Judge's Name</span>
                         </label>
-                        <input type="text" id="namaHakim" required class="w-full rounded-xl border-slate-200 p-3 text-sm border bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" placeholder="Cth: Dr. Alex Wong / En. Ahmad Farhan">
+                        <select id="namaHakim" required class="w-full rounded-xl border-slate-200 p-3 text-sm border bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition font-medium">
+                            <option value="">-- Sila Pilih Nama Hakim --</option>
+                            <option value="Nurnajwani binti Senian">Nurnajwani binti Senian</option>
+                            <option value="Noor Asma binti A’At">Noor Asma binti A’At</option>
+                        </select>
                     </div>
+
+                    <!-- Dropdown No. Booth / Program -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase mb-1">
-                            No. Booth / Nama Program / Projek <span class="text-slate-400 font-normal">/ Booth No. or Project Name</span>
+                            No. Booth / Nama Program <span class="text-slate-400 font-normal">/ Select Booth</span>
                         </label>
-                        <input type="text" id="noBooth" required class="w-full rounded-xl border-slate-200 p-3 text-sm border bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition font-bold text-slate-800" placeholder="Cth: Booth A-12 / AI Eco-Sort">
+                        <select id="noBooth" required class="w-full rounded-xl border-slate-200 p-3 text-sm border bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition font-bold text-slate-800">
+                            <option value="">-- Sila Pilih Booth / Program --</option>
+                            <option value="ETE">1. ETE</option>
+                            <option value="ETN">2. ETN</option>
+                            <option value="WTP">3. WTP</option>
+                            <option value="BPP">4. BPP</option>
+                            <option value="HKM">5. HKM</option>
+                            <option value="HFD">6. HFD</option>
+                            <option value="MPI">7. MPI</option>
+                            <option value="MTK">8. MTK</option>
+                            <option value="MTA">9. MTA</option>
+                            <option value="HSK">10. HSK</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -241,7 +260,6 @@
             container.innerHTML = '';
             
             boothSections.forEach(sec => {
-                // Header Kategori Utama
                 let sectionHtml = `
                     <div class="mt-8 mb-4 p-4 bg-emerald-900/10 border-l-4 border-emerald-600 rounded-r-xl">
                         <h3 class="text-base font-black text-emerald-950 uppercase tracking-tight">${sec.sectionTitle}</h3>
@@ -308,7 +326,7 @@
             const booth = document.getElementById('noBooth').value;
 
             if(!hakim || !booth) {
-                alert("Sila lengkapkan ruangan Nama Hakim dan No. Booth / Nama Program.");
+                alert("Sila pilih Nama Hakim dan No. Booth / Program terlebih dahulu.");
                 return;
             }
 
@@ -331,7 +349,7 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             }).then(() => {
-                alert(`Berjaya! Markah penilaian untuk ${booth} telah direkodkan.`);
+                alert(`Berjaya! Markah penilaian dari ${hakim} untuk ${booth} telah direkodkan.`);
                 document.getElementById('noBooth').value = '';
                 document.getElementById('ulasan').value = '';
                 loadBoothRubric();
