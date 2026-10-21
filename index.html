@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIIC 4.0 — Official Evaluation Portal / Portal Penilaian Rasmi</title>
+    <title>BIIC 4.0 — Portal Penilaian Booth Pameran</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -36,29 +36,29 @@
                     <div>
                         <div class="flex items-center justify-center md:justify-start gap-2 mb-1.5 flex-wrap">
                             <span class="bg-emerald-400/20 text-emerald-300 border border-emerald-400/40 text-[10px] font-extrabold px-3 py-0.5 rounded-full uppercase tracking-wider shadow-sm backdrop-blur-md">
-                                Portal Penilaian Rasmi / Official Portal
+                                Penilaian Majlis Penutupan / Closing Ceremony
                             </span>
                             <span class="bg-teal-400/20 text-teal-200 border border-teal-400/30 text-[10px] font-semibold px-2.5 py-0.5 rounded-full backdrop-blur-md">
-                                Versi 2.1 (Termasuk Booth Pameran)
+                                Booth Exhibition v1.0
                             </span>
                         </div>
                         <h1 class="text-2xl md:text-4xl font-black tracking-tight text-white drop-shadow-lg">
-                            BIIC 4.0 <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-200">JUDGING SYSTEM</span>
+                            BIIC 4.0 <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-200">BOOTH EVALUATION</span>
                         </h1>
                         <p class="text-xs md:text-sm text-slate-200 font-medium mt-1 drop-shadow-sm">
-                            Borneo Innovation and Invention Competition • AI & Green Technology
+                            Borneo Innovation and Invention Competition • Penilaian Pameran Fizikal
                         </p>
                     </div>
                 </div>
 
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-3.5 text-center shrink-0 shadow-inner min-w-[170px]">
-                    <span class="text-[9px] text-emerald-300/90 block uppercase font-bold tracking-widest mb-0.5">Tahap Keselamatan</span>
+                    <span class="text-[9px] text-emerald-300/90 block uppercase font-bold tracking-widest mb-0.5">Status Sistem</span>
                     <span class="text-xs font-bold text-white flex items-center justify-center gap-2">
                         <span class="relative flex h-2.5 w-2.5">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                         </span>
-                        SULIT / CONFIDENTIAL
+                        LIVE / AKTIF
                     </span>
                 </div>
             </div>
@@ -66,15 +66,15 @@
 
         <form id="scoringForm" onsubmit="event.preventDefault();" class="p-6 md:p-10 space-y-8">
             
-            <!-- Maklumat Hakim & Peserta -->
+            <!-- Maklumat Hakim & Peserta (Ringkas & Terus ke Rubrik) -->
             <div>
                 <h3 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    Maklumat Penilai & Peserta / Evaluation Details
+                    Maklumat Penilaian Booth / Booth Evaluation Details
                 </h3>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div class="md:col-span-2">
+                    <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase mb-1">
                             Nama Hakim <span class="text-slate-400 font-normal">/ Judge's Name</span>
                         </label>
@@ -82,44 +82,18 @@
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase mb-1">
-                            Kod / ID Peserta <span class="text-slate-400 font-normal">/ Participant ID</span>
+                            No. Booth / Nama Program / Projek <span class="text-slate-400 font-normal">/ Booth No. or Project Name</span>
                         </label>
-                        <input type="text" id="kodPeserta" required class="w-full rounded-xl border-slate-200 p-3 text-sm border bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition font-mono font-bold text-slate-800" placeholder="Cth: BIIC-J-012">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">
-                            Tajuk Projek / Booth <span class="text-slate-400 font-normal">/ Project or Booth Title</span>
-                        </label>
-                        <input type="text" id="namaProjek" required class="w-full rounded-xl border-slate-200 p-3 text-sm border bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" placeholder="Cth: AI Eco-Sort System">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">
-                            Kategori <span class="text-slate-400 font-normal">/ Category</span>
-                        </label>
-                        <select id="kategori" class="w-full rounded-xl border-slate-200 p-3 text-sm border bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition font-medium">
-                            <option value="Junior">Junior (Sek. Rendah / Sek. Menengah / KV - SVM)</option>
-                            <option value="Tertiary">Tertiary (IPTA / IPTS / ILKA / KV - DVM)</option>
-                            <option value="Profesional">Profesional (Awam / Industri / Pensyarah / Agensi)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">
-                            Peringkat Penilaian <span class="text-slate-400 font-normal">/ Evaluation Stage</span>
-                        </label>
-                        <select id="peringkat" onchange="switchRubric()" class="w-full rounded-xl border-emerald-300 p-3 text-sm border bg-emerald-50/40 text-emerald-900 font-bold focus:ring-2 focus:ring-emerald-500 focus:outline-none transition">
-                            <option value="preliminary">Peringkat Awal / Preliminary Stage (Video & Poster)</option>
-                            <option value="final">Peringkat Akhir / Final Stage (Atas Talian / Online)</option>
-                            <option value="booth">Penilaian Booth Pameran / Exhibition Booth (Majlis Penutupan)</option>
-                        </select>
+                        <input type="text" id="noBooth" required class="w-full rounded-xl border-slate-200 p-3 text-sm border bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition font-bold text-slate-800" placeholder="Cth: Booth A-12 / AI Eco-Sort">
                     </div>
                 </div>
             </div>
 
-            <!-- Seksyen Rubrik Pemarkahan -->
+            <!-- Seksyen Rubrik Pemarkahan Booth -->
             <div>
                 <div class="border-b border-slate-100 pb-3 mb-6">
-                    <h2 class="text-lg font-extrabold text-slate-900" id="rubricTitle">Rubrik Penilaian / Assessment Rubric</h2>
-                    <p class="text-xs text-slate-500 mt-0.5" id="rubricDesc"></p>
+                    <h2 class="text-lg font-extrabold text-slate-900" id="rubricTitle">Rubrik Penilaian Booth Pameran / Exhibition Booth Rubric</h2>
+                    <p class="text-xs text-slate-500 mt-0.5" id="rubricDesc">Menilai kreativiti rekabentuk, penyampaian maklumat, penggunaan ruang, alat sokongan, dan hospitaliti semasa majlis penutupan.</p>
                 </div>
 
                 <div id="rubricFields" class="space-y-6"></div>
@@ -130,7 +104,7 @@
                 <label class="block text-xs font-bold text-slate-700 uppercase mb-2">
                     Ulasan & Cadangan Hakim <span class="text-slate-400 font-normal">/ Judge's Feedback & Recommendations</span>
                 </label>
-                <textarea id="ulasan" rows="3" class="w-full rounded-xl border-slate-200 border p-3.5 text-sm bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" placeholder="Berikan ulasan membina untuk peserta / Provide constructive feedback..."></textarea>
+                <textarea id="ulasan" rows="3" class="w-full rounded-xl border-slate-200 border p-3.5 text-sm bg-slate-50/50 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" placeholder="Berikan ulasan membina untuk peserta booth..."></textarea>
             </div>
 
             <!-- Jumlah Markah Kad Dashboard -->
@@ -143,13 +117,13 @@
 
             <!-- Butang Hantar -->
             <button type="button" id="submitBtn" onclick="hantarBorang()" class="w-full bg-slate-900 hover:bg-emerald-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-sm tracking-wide">
-                <span>🚀</span> HANTAR MARKAH PENILAIAN / SUBMIT SCORE
+                <span>🚀</span> HANTAR MARKAH BOOTH / SUBMIT BOOTH SCORE
             </button>
         </form>
 
         <!-- Footer -->
         <div class="bg-slate-50 border-t border-slate-100 p-4 text-center text-xs text-slate-400 font-medium">
-            Borneo Innovation and Invention Competition (BIIC 4.0) • Digital Assessment System v2.1
+            Borneo Innovation and Invention Competition (BIIC 4.0) • Exhibition Booth Evaluation System
         </div>
     </div>
 
@@ -157,239 +131,86 @@
     <script>
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzxf0tpyGLtcHvuW7a5envVEvfnXZ1p18NxI6cE_MKNKDySfSLrV9EChfx0Cku5slAD/exec";
 
-        const rubrics = {
-            preliminary: {
-                title: "Rubrik Penilaian Peringkat Awal / Preliminary Stage Rubric",
-                desc: "Menilai cadangan awal, konsep inovasi utama, kualiti dokumentasi, dan video pitch berdasarkan panduan rasmi.",
-                criteria: [
-                    { 
-                        id: "k1", 
-                        label: "1. Keaslian & Relevansi Tema / Originality & Theme Alignment", 
-                        max: 20, 
-                        desc: "Keaslian idea dan keselarasan dengan tema AI & Green Tech.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Tidak mengikut tema langsung. Tiada unsur AI atau Green Tech." },
-                            { range: "1-5", title: "Sangat Lemah", desc: "Ada unsur tema tetapi samar. Idea tidak asli atau kaitannya sangat kabur." },
-                            { range: "6-10", title: "Sederhana", desc: "Unsur tema cuba ditampilkan tetapi kurang jelas, umum, atau gabungan idea kurang kukuh." },
-                            { range: "11-15", title: "Baik", desc: "Terdapat salah satu unsur tema (AI atau Green Tech sahaja) secara jelas dan teratur." },
-                            { range: "16-20", title: "Cemerlang", desc: "Terdapat kedua-dua tema digabungkan secara sangat kreatif, asli, dan holistik." }
-                        ]
-                    },
-                    { 
-                        id: "k2", 
-                        label: "2. Nilai Inovasi & Impak / Innovation Value & Impact", 
-                        max: 25, 
-                        desc: "Keunikan dan potensi menyelesaikan masalah sebenar.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Tiada unsur inovasi, idea tiruan sepenuhnya, dan tidak mampu menyelesaikan masalah." },
-                            { range: "1-6", title: "Sangat Lemah", desc: "Keunikan sangat rendah, penambahbaikan minima, dan potensi penyelesaian terhad." },
-                            { range: "7-12", title: "Sederhana", desc: "Mempunyai keunikan asas tetapi impak penyelesaian kurang nyata atau liputan kecil." },
-                            { range: "13-18", title: "Baik", desc: "Inovasi kukuh, ada keunikan tersendiri, berpotensi menyelesaikan masalah dunia sebenar." },
-                            { range: "19-25", title: "Cemerlang", desc: "Inovasi sangat unik, berdaya saing tinggi, bernilai komersial/sosial, dan berimpak signifikan." }
-                        ]
-                    },
-                    { 
-                        id: "k3", 
-                        label: "3. Kualiti Produk & Keberfungsian / Product Quality & Functionality", 
-                        max: 25, 
-                        desc: "Boleh laksana, kualiti binaan prototaip, dan logik operasi.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Projek tidak boleh dilaksanakan, prototaip tidak berfungsi, atau logik operasi gagal." },
-                            { range: "1-6", title: "Sangat Lemah", desc: "Boleh dilaksanakan secara teori sahaja, binaan amat lemah, banyak ralat, logik tidak teratur." },
-                            { range: "7-12", title: "Sederhana", desc: "Prototaip berfungsi sebahagian sahaja; logik operasi masih mempunyai kekangan teknikal." },
-                            { range: "13-18", title: "Baik", desc: "Kualiti binaan prototaip baik, boleh dilaksanakan dengan selamat, logik jelas, stabil." },
-                            { range: "19-25", title: "Cemerlang", desc: "Prototaip sangat kukuh/stabil, kualiti tinggi, logik cemerlang, berfungsi sepenuhnya." }
-                        ]
-                    },
-                    { 
-                        id: "k4", 
-                        label: "4. Persembahan & Penyampaian Video / Presentation & Video Pitch", 
-                        max: 20, 
-                        desc: "Kejelasan persembahan video, struktur, dan kelancaran komunikasi.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Tiada video pitch atau bahan persembahan disediakan." },
-                            { range: "1-5", title: "Sangat Lemah", desc: "Penyampaian sangat lemah, bercelaru, tidak berstruktur, gagal menyampaikan mesej." },
-                            { range: "6-10", title: "Sederhana", desc: "Penerangan asas ada tetapi kurang menarik/meyakinkan, kualiti suntingan video lemah." },
-                            { range: "11-15", title: "Baik", desc: "Persembahan jelas, teratur, mengikut tempoh masa, kualiti video pitch memuaskan." },
-                            { range: "16-20", title: "Cemerlang", desc: "Penyampaian profesional, kreatif, berkeyakinan tinggi, struktur video pitch cemerlang." }
-                        ]
-                    },
-                    { 
-                        id: "k5", 
-                        label: "5. Dokumentasi & Rekabentuk Poster / Documentation & Poster Design", 
-                        max: 10, 
-                        desc: "Kelengkapan visual poster, struktur data, dan kejelasan maklumat.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Tiada poster atau dokumen sokongan disediakan." },
-                            { range: "1-2", title: "Sangat Lemah", desc: "Kelengkapan visual sangat lemah, maklumat sukar dibaca, tiada susunan struktur data." },
-                            { range: "3-5", title: "Sederhana", desc: "Visual dan struktur data asas ada, tetapi susun atur padat dan maklumat kurang jelas." },
-                            { range: "6-8", title: "Baik", desc: "Rekabentuk poster menarik, visual lengkap, struktur tersusun baik, maklumat mudah difahami." },
-                            { range: "9-10", title: "Cemerlang", desc: "Visual poster amat lengkap, rekabentuk profesional, struktur data cemerlang, jelas." }
-                        ]
-                    }
+        const boothCriteria = [
+            { 
+                id: "b1a", 
+                label: "1a. Rekabentuk Booth / Booth Design", 
+                max: 25, 
+                desc: "Keunikan, kreativiti konsep booth dan kekemasan susunan bahan.",
+                scales: [
+                    { range: "0-5", title: "Lemah", desc: "Konsep hambar, tidak menarik, tiada tema, susunan berterabur." },
+                    { range: "6-14", title: "Sederhana", desc: "Konsep asas ada, susunan ringkas tetapi kurang kemas." },
+                    { range: "15-20", title: "Baik", desc: "Rekabentuk kemas, menarik, konsep jelas dan tersusun rapi." },
+                    { range: "21-25", title: "Cemerlang", desc: "Rekabentuk sangat kreatif, unik, berimpak tinggi & profesional." }
                 ]
             },
-            final: {
-                title: "Rubrik Penilaian Peringkat Akhir (Atas Talian / Online) / Final Stage Rubric",
-                desc: "Menilai kualiti projek, demonstrasi secara langsung/perkongsian skrin, kemahiran komunikasi atas talian, dan sesi soal jawab.",
-                criteria: [
-                    { 
-                        id: "k1", 
-                        label: "1. Keaslian & Relevansi Tema / Originality & Theme Alignment", 
-                        max: 20, 
-                        desc: "Keaslian idea dan keselarasan dengan tema AI & Green Tech.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Tidak mengikut tema langsung. Tiada unsur AI atau Green Tech." },
-                            { range: "1-5", title: "Sangat Lemah", desc: "Ada unsur tema tetapi samar. Idea tidak asli atau kaitannya sangat kabur." },
-                            { range: "6-10", title: "Sederhana", desc: "Unsur tema cuba ditampilkan tetapi kurang jelas, umum, atau gabungan idea kurang kukuh." },
-                            { range: "11-15", title: "Baik", desc: "Terdapat salah satu unsur tema (AI atau Green Tech sahaja) secara jelas dan teratur." },
-                            { range: "16-20", title: "Cemerlang", desc: "Terdapat kedua-dua tema digabungkan secara sangat kreatif, asli, dan holistik." }
-                        ]
-                    },
-                    { 
-                        id: "k2", 
-                        label: "2. Nilai Inovasi & Impak / Innovation Value & Impact", 
-                        max: 20, 
-                        desc: "Keunikan dan potensi menyelesaikan masalah sebenar.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Tiada unsur inovasi, idea tiruan sepenuhnya, dan tidak mampu menyelesaikan masalah." },
-                            { range: "1-4", title: "Sangat Lemah", desc: "Keunikan sangat rendah, penambahbaikan minima, dan potensi penyelesaian terhad." },
-                            { range: "5-9", title: "Sederhana", desc: "Mempunyai keunikan asas tetapi impak penyelesaian kurang nyata atau liputan kecil." },
-                            { range: "10-14", title: "Baik", desc: "Inovasi kukuh, ada keunikan tersendiri, berpotensi menyelesaikan masalah dunia sebenar." },
-                            { range: "15-20", title: "Cemerlang", desc: "Inovasi sangat unik, berdaya saing tinggi, bernilai komersial/sosial, dan berimpak signifikan." }
-                        ]
-                    },
-                    { 
-                        id: "k3", 
-                        label: "3. Kualiti Produk & Keberfungsian Atas Talian / Product Quality & Functionality", 
-                        max: 20, 
-                        desc: "Kebolehlaksanaan projek, kelancaran demonstrasi secara langsung/video melalui perkongsian skrin, dan logik operasi.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Projek gagal dibuktikan secara atas talian, tiada demonstrasi sistem, atau logik operasi gagal." },
-                            { range: "1-4", title: "Sangat Lemah", desc: "Demonstrasi bermasalah besar, banyak ralat teknikal/paparan skrin tidak jelas, logik operasi gagal." },
-                            { range: "5-9", title: "Sederhana", desc: "Sistem berfungsi sebahagian sahaja semasa pembentangan; terdapat kekangan teknikal/paparan." },
-                            { range: "10-14", title: "Baik", desc: "Demonstrasi lancar, perkongsian skrin jelas, logik operasi teratur, sistem menunjukkan kestabilan asas." },
-                            { range: "15-20", title: "Cemerlang", desc: "Demonstrasi atas talian sangat lancar & profesional, fungsi dipamerkan sepenuhnya tanpa ralat." }
-                        ]
-                    },
-                    { 
-                        id: "k4", 
-                        label: "4. Pembentangan & Kemahiran Komunikasi Atas Talian / Presentation & Communication", 
-                        max: 25, 
-                        desc: "Kejelasan suara/audio, keyakinan penyampaian, struktur idea, kualiti slaid visual, etika, dan pengurusan persekitaran maya.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Tiada video/bahan pembentangan, kamera ditutup tanpa alasan, atau audio gagal berfungsi." },
-                            { range: "1-6", title: "Sangat Lemah", desc: "Penyampaian sangat lemah, bercelaru, audio terputus-putus, dan penampilan tidak profesional." },
-                            { range: "7-13", title: "Sederhana", desc: "Penerangan asas ada tetapi kurang menarik/meyakinkan, kawalan komunikasi atas talian sederhana." },
-                            { range: "14-19", title: "Baik", desc: "Persembahan dan penyampaian jelas, teratur, slaid menarik, mengikut masa, komunikasi maya memuaskan." },
-                            { range: "20-25", title: "Cemerlang", desc: "Penyampaian sangat profesional, kreatif, berkeyakinan tinggi, slaid berkesan, komunikasi maya cemerlang." }
-                        ]
-                    },
-                    { 
-                        id: "k5", 
-                        label: "5. Soal Jawab (Q&A) Secara Atas Talian / Question & Answer", 
-                        max: 15, 
-                        desc: "Kemahiran mendengar soalan juri di platform maya, ketepatan jawapan, dan keyakinan semasa mikrofon diaktifkan.",
-                        scales: [
-                            { range: "0", title: "Tidak Sesuai", desc: "Gagal mendengar/memahami soalan, tidak mampu menjawab, atau jawapan tidak berkaitan." },
-                            { range: "1-4", title: "Sangat Lemah", desc: "Sukar memahami soalan juri akibat gangguan komunikasi, menjawab ragu-ragu, jawapan terkeluar tajuk." },
-                            { range: "5-8", title: "Sederhana", desc: "Mendengar soalan tetapi memerlukan ulangan, menjawab kurang yakin, jawapan meleret-leret." },
-                            { range: "9-12", title: "Baik", desc: "Mendengar soalan dengan baik, menjawab dengan yakin dan sopan, jawapan tepat memenuhi kehendak." },
-                            { range: "13-15", title: "Cemerlang", desc: "Memahami soalan juri dengan amat pantas/tepat, menjawab dengan penuh keyakinan, bernas & padat." }
-                        ]
-                    }
+            { 
+                id: "b1b", 
+                label: "1b. Bahan Pameran / Exhibition Materials", 
+                max: 25, 
+                desc: "Kepelbagaian bahan pameran dan daya tarikan kepada pengunjung.",
+                scales: [
+                    { range: "0-5", title: "Lemah", desc: "Bahan pameran sangat terhad, membosankan & tidak menarik." },
+                    { range: "6-14", title: "Sederhana", desc: "Bahan pameran ada tetapi biasa dan kurang variasi." },
+                    { range: "15-20", title: "Baik", desc: "Bahan pameran pelbagai, berinformasi, dan menarik minat." },
+                    { range: "21-25", title: "Cemerlang", desc: "Bahan pameran sangat pelbagai, interaktif, canggih & luar biasa." }
                 ]
             },
-            booth: {
-                title: "Rubrik Penilaian Booth Pameran / Exhibition Booth Rubric",
-                desc: "Menilai kreativiti rekabentuk, penyampaian maklumat, penggunaan ruang, alat sokongan, dan hospitaliti semasa majlis penutupan.",
-                criteria: [
-                    { 
-                        id: "b1a", 
-                        label: "1a. Rekabentuk Booth / Booth Design", 
-                        max: 25, 
-                        desc: "Keunikan, kreativiti konsep booth dan kekemasan susunan bahan.",
-                        scales: [
-                            { range: "0-5", title: "Lemah", desc: "Konsep hambar, tidak menarik, tiada tema, susunan berterabur." },
-                            { range: "6-14", title: "Sederhana", desc: "Konsep asas ada, susunan ringkas tetapi kurang kemas." },
-                            { range: "15-20", title: "Baik", desc: "Rekabentuk kemas, menarik, konsep jelas dan tersusun rapi." },
-                            { range: "21-25", title: "Cemerlang", desc: "Rekabentuk sangat kreatif, unik, berimpak tinggi & profesional." }
-                        ]
-                    },
-                    { 
-                        id: "b1b", 
-                        label: "1b. Bahan Pameran / Exhibition Materials", 
-                        max: 25, 
-                        desc: "Kepelbagaian bahan pameran dan daya tarikan kepada pengunjung.",
-                        scales: [
-                            { range: "0-5", title: "Lemah", desc: "Bahan pameran sangat terhad, membosankan & tidak menarik." },
-                            { range: "6-14", title: "Sederhana", desc: "Bahan pameran ada tetapi biasa dan kurang variasi." },
-                            { range: "15-20", title: "Baik", desc: "Bahan pameran pelbagai, berinformasi, dan menarik minat." },
-                            { range: "21-25", title: "Cemerlang", desc: "Bahan pameran sangat pelbagai, interaktif, canggih & luar biasa." }
-                        ]
-                    },
-                    { 
-                        id: "b2", 
-                        label: "2. Penyampaian Maklumat / Information Delivery", 
-                        max: 15, 
-                        desc: "Penguasaan isi kandungan, kejelasan, dan keyakinan penyampaian.",
-                        scales: [
-                            { range: "0-3", title: "Lemah", desc: "Tidak menguasai kandungan projek, penyampaian tidak jelas." },
-                            { range: "4-8", title: "Sederhana", desc: "Memahami asas tetapi kurang yakin atau kurang tersusun." },
-                            { range: "9-12", title: "Baik", desc: "Penyampaian jelas, teratur, yakin, dan menguasai projek." },
-                            { range: "13-15", title: "Cemerlang", desc: "Sangat lancar, karismatik, meyakinkan & penguasaan penuh." }
-                        ]
-                    },
-                    { 
-                        id: "b3", 
-                        label: "3. Penggunaan Ruang / Space Utilization", 
-                        max: 15, 
-                        desc: "Penggunaan ruang optimum serta susunan teratur dan sistematik.",
-                        scales: [
-                            { range: "0-3", title: "Lemah", desc: "Ruang terlalu padat/kosong, susunan mengganggu laluan." },
-                            { range: "4-8", title: "Sederhana", desc: "Penggunaan ruang sederhana, agak teratur." },
-                            { range: "9-12", title: "Baik", desc: "Ruang diurus dengan baik, teratur, laluan pengunjung selesa." },
-                            { range: "13-15", title: "Cemerlang", desc: "Penggunaan ruang sangat optimum, sistematik & profesional." }
-                        ]
-                    },
-                    { 
-                        id: "b4", 
-                        label: "4. Alat Sokongan Pameran / Exhibition Support Tools", 
-                        max: 10, 
-                        desc: "Penggunaan bahan visual/teknologi dan keberkesanan menarik perhatian.",
-                        scales: [
-                            { range: "0-2", title: "Lemah", desc: "Tiada alat sokongan atau tidak sesuai/gagal berfungsi." },
-                            { range: "3-5", title: "Sederhana", desc: "Alat sokongan asas digunakan tetapi kurang berimpak." },
-                            { range: "6-8", title: "Baik", desc: "Penggunaan visual/teknologi sesuai dan menarik minat." },
-                            { range: "9-10", title: "Cemerlang", desc: "Visual/teknologi sangat kreatif, interaktif & berimpak tinggi." }
-                        ]
-                    },
-                    { 
-                        id: "b5", 
-                        label: "5. Hospitaliti / Hospitality", 
-                        max: 10, 
-                        desc: "Layanan mesra, bersopan, serta interaksi aktif dan profesional.",
-                        scales: [
-                            { range: "0-2", title: "Lemah", desc: "Pasif, tidak mesra, atau tidak mengendahkan pengunjung." },
-                            { range: "3-5", title: "Sederhana", desc: "Layanan biasa, menjawab bila ditanya tetapi kurang proaktif." },
-                            { range: "6-8", title: "Baik", desc: "Mesra, bersopan santun, proaktif menyapa dan menerang." },
-                            { range: "9-10", title: "Cemerlang", desc: "Sangat profesional, peramah, bertenaga & layanan cemerlang." }
-                        ]
-                    }
+            { 
+                id: "b2", 
+                label: "2. Penyampaian Maklumat / Information Delivery", 
+                max: 15, 
+                desc: "Penguasaan isi kandungan, kejelasan, dan keyakinan penyampaian.",
+                scales: [
+                    { range: "0-3", title: "Lemah", desc: "Tidak menguasai kandungan projek, penyampaian tidak jelas." },
+                    { range: "4-8", title: "Sederhana", desc: "Memahami asas tetapi kurang yakin atau kurang tersusun." },
+                    { range: "9-12", title: "Baik", desc: "Penyampaian jelas, teratur, yakin, dan menguasai projek." },
+                    { range: "13-15", title: "Cemerlang", desc: "Sangat lancar, karismatik, meyakinkan & penguasaan penuh." }
+                ]
+            },
+            { 
+                id: "b3", 
+                label: "3. Penggunaan Ruang / Space Utilization", 
+                max: 15, 
+                desc: "Penggunaan ruang optimum serta susunan teratur dan sistematik.",
+                scales: [
+                    { range: "0-3", title: "Lemah", desc: "Ruang terlalu padat/kosong, susunan mengganggu laluan." },
+                    { range: "4-8", title: "Sederhana", desc: "Penggunaan ruang sederhana, agak teratur." },
+                    { range: "9-12", title: "Baik", desc: "Ruang diurus dengan baik, teratur, laluan pengunjung selesa." },
+                    { range: "13-15", title: "Cemerlang", desc: "Penggunaan ruang sangat optimum, sistematik & profesional." }
+                ]
+            },
+            { 
+                id: "b4", 
+                label: "4. Alat Sokongan Pameran / Exhibition Support Tools", 
+                max: 10, 
+                desc: "Penggunaan bahan visual/teknologi dan keberkesanan menarik perhatian.",
+                scales: [
+                    { range: "0-2", title: "Lemah", desc: "Tiada alat sokongan atau tidak sesuai/gagal berfungsi." },
+                    { range: "3-5", title: "Sederhana", desc: "Alat sokongan asas digunakan tetapi kurang berimpak." },
+                    { range: "6-8", title: "Baik", desc: "Penggunaan visual/teknologi sesuai dan menarik minat." },
+                    { range: "9-10", title: "Cemerlang", desc: "Visual/teknologi sangat kreatif, interaktif & berimpak tinggi." }
+                ]
+            },
+            { 
+                id: "b5", 
+                label: "5. Hospitaliti / Hospitality", 
+                max: 10, 
+                desc: "Layanan mesra, bersopan, serta interaksi aktif dan profesional.",
+                scales: [
+                    { range: "0-2", title: "Lemah", desc: "Pasif, tidak mesra, atau tidak mengendahkan pengunjung." },
+                    { range: "3-5", title: "Sederhana", desc: "Layanan biasa, menjawab bila ditanya tetapi kurang proaktif." },
+                    { range: "6-8", title: "Baik", desc: "Mesra, bersopan santun, proaktif menyapa dan menerang." },
+                    { range: "9-10", title: "Cemerlang", desc: "Sangat profesional, peramah, bertenaga & layanan cemerlang." }
                 ]
             }
-        };
+        ];
 
-        function switchRubric() {
-            const stage = document.getElementById('peringkat').value;
-            const currentRubric = rubrics[stage];
-            document.getElementById('rubricTitle').innerText = currentRubric.title;
-            document.getElementById('rubricDesc').innerText = currentRubric.desc;
-
+        function loadBoothRubric() {
             const container = document.getElementById('rubricFields');
             container.innerHTML = '';
             
-            currentRubric.criteria.forEach(item => {
+            boothCriteria.forEach(item => {
                 let scalesHtml = '';
                 item.scales.forEach(s => {
                     scalesHtml += `
@@ -441,11 +262,10 @@
         function hantarBorang() {
             const btn = document.getElementById('submitBtn');
             const hakim = document.getElementById('namaHakim').value;
-            const kod = document.getElementById('kodPeserta').value;
-            const projek = document.getElementById('namaProjek').value;
+            const booth = document.getElementById('noBooth').value;
 
-            if(!hakim || !kod || !projek) {
-                alert("Sila lengkapkan ruangan Nama Hakim, Kod Peserta, dan Tajuk Projek / Please complete all required fields.");
+            if(!hakim || !booth) {
+                alert("Sila lengkapkan ruangan Nama Hakim dan No. Booth / Nama Program.");
                 return;
             }
 
@@ -454,10 +274,10 @@
 
             const payload = {
                 judgeName: hakim,
-                participantId: kod,
-                projectTitle: projek,
-                category: document.getElementById('kategori').value,
-                stage: document.getElementById('peringkat').value,
+                participantId: booth, // Disimpan pada kolum ID Peserta / Booth di Google Sheet
+                projectTitle: booth,  // Disimpan juga pada tajuk untuk rujukan mudah
+                category: "Booth Pameran",
+                stage: "Booth Exhibition",
                 score: document.getElementById('totalScore').innerText,
                 feedback: document.getElementById('ulasan').value
             };
@@ -468,21 +288,20 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             }).then(() => {
-                alert(`Berjaya! Markah penilaian untuk ${kod} telah direkodkan / Evaluation score for ${kod} successfully recorded.`);
-                document.getElementById('kodPeserta').value = '';
-                document.getElementById('namaProjek').value = '';
+                alert(`Berjaya! Markah penilaian untuk ${booth} telah direkodkan.`);
+                document.getElementById('noBooth').value = '';
                 document.getElementById('ulasan').value = '';
-                switchRubric();
+                loadBoothRubric();
                 btn.disabled = false;
-                btn.innerHTML = `<span>🚀</span> HANTAR MARKAH PENILAIAN / SUBMIT SCORE`;
+                btn.innerHTML = `<span>🚀</span> HANTAR MARKAH BOOTH / SUBMIT BOOTH SCORE`;
             }).catch(err => {
-                alert("Ralat semasa menghantar. Sila semak talian internet anda / Error submitting data.");
+                alert("Ralat semasa menghantar. Sila semak talian internet anda.");
                 btn.disabled = false;
-                btn.innerHTML = `<span>🚀</span> HANTAR MARKAH PENILAIAN / SUBMIT SCORE`;
+                btn.innerHTML = `<span>🚀</span> HANTAR MARKAH BOOTH / SUBMIT BOOTH SCORE`;
             });
         }
 
-        window.onload = switchRubric;
+        window.onload = loadBoothRubric;
     </script>
 </body>
 </html>
